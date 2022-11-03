@@ -1,0 +1,82 @@
+#include    <iostream>
+#include    <queue>
+#include    <conio.h>
+#include    <iomanip>
+#include    <string>
+#include    <Header.h>
+#include    <NfaToDfa.h>
+#include    <Test String.h>
+#include    <header.2.h>
+#include    <Minimized-DFA.h>
+#include    <MySql man.h>
+#include    <color.hpp>
+#include    <tabulate/table.hpp>
+#include    <FileIO.h>
+#include    <Design console.h>
+
+using namespace tabulate;
+using namespace dye;
+using namespace std;
+
+struct FA FA1=getTmpFA("FAtmp.txt"),FA2=getTmpFA("FAConverted.txt"),FA3=getTmpFA("FAMinimized.txt");
+MYSQL *Connector=connection();
+
+bool CLIENTDASHBOARD(){
+    int i=1;
+    Menu(i);
+    char ch;
+    while(1){
+        ch=_getch();
+        switch(ch){
+            case 72:
+                if(i>1){
+                    i--;
+                    Menu(i);
+                }
+                break;
+            case 80:
+                if(i<5){
+                    i++;
+                    Menu(i);
+                }
+                break;
+            default:
+                i=1;
+                Menu(i);
+                break;
+        }
+    }
+    cout<<"\n\n";
+
+
+}
+
+int main()
+{
+
+    string ch;
+
+    if(Connector){
+        CLIENTDASHBOARD();
+    }else{
+        cout<<"\t\t\tAre you going to use it offline?(y/n):";
+        cin>>ch;
+        if(ch=="y"||ch=="yes"){
+            while(CLIENTDASHBOARD());
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,439 @@
+#include <iostream>
+#include <queue>
+#include <conio.h>
+#include <iomanip>
+
+using namespace std;
+struct newRepresentState{
+    string value;
+    queue<string> setOfState;
+};
+
+struct Transition{
+    string presentState;
+    char TransitionChar;
+    queue <string> nextState;
+};
+struct FA{
+    queue<string> Q;
+    string startState;
+    queue<string>final_state;
+    queue <char> character;
+    queue<Transition>transitionSet;
+};
+
+
+queue<string> StringSplit(string text,char separator){
+    queue <string> tmp;
+    string tmpText="";
+    for(int i=0;i<text.size();i++){
+        if(text[i]==separator ){
+            tmp.push(tmpText);
+            tmpText="";
+            continue;
+        }
+        if(text[i] == ' '){
+            continue;
+        }
+        if(i==text.size()-1){
+            tmpText+=text[i];
+            tmp.push(tmpText);
+            tmpText="";
+            continue;
+        }
+        tmpText+=text[i];
+    }
+    return tmp;
+};
+string getStateByPos(queue <string> q,int pos){
+    if(pos>0 && pos<q.size()){
+        for(int i=0;i<pos;i++){
+            q.pop();
+        }
+        return q.front();
+    }else{
+        return q.front();
+    }
+};
+bool isduplicate(string text,char separator){
+    queue <string> str=StringSplit(text,separator);
+    queue <string> str_1=StringSplit(text,separator);
+    for(int i=0;i<str.size();i++){
+        for(int j=0;j<str_1.size();j++){
+            if(i!=j){
+                if(getStateByPos(str,i)==getStateByPos(str_1,j)){
+                    return true;
+                }
+            }
+        }
+    }
+
+    return false;
+
+}
+
+bool isExist(queue <string> Qset,string text){
+    while(!Qset.empty()){
+        if(text==Qset.front()){
+            return true;
+        }
+        Qset.pop();
+    }
+    return false;
+};
+
+FA getInput(){
+    struct FA FA;
+
+    int k=0;
+    string state;
+    char separator=' ';
+    cout<<"Input your State(separate by space):";
+    getline(cin,state);
+    while(isduplicate(state,separator)){
+        cout<<"State has been duplicate:";
+        getline(cin,state);
+    }
+    while(state=="" || state==" "){
+        cout<<"State can't be Empty\n\tInput again:";
+        cout<<"\n\t\ttry again:";
+        getline(cin,state);
+    };
+
+    FA.Q=StringSplit(state,separator);
+    string strArr[FA.Q.size()];
+    queue<string> stringTmp=FA.Q;
+    for(int i=0;!stringTmp.empty();i++){
+        strArr[i]=stringTmp.front();
+        stringTmp.pop();
+    }
+
+    cout<<"Which one is your Start state:";
+    do{
+        cin>>state;
+        if(isExist(FA.Q,state)){
+            FA.startState=state;
+        }else{
+            cout<<"Start State not Exist in all state!!\n";
+            cout<<"\t\tInput again:";
+            cin>>state;
+        }
+    }while(!isExist(FA.Q,state));
+    k=0;
+    cout<<"Input your Final state:";
+    cin.ignore(1,'\n');
+    do{
+        getline(cin,state);
+        while(isduplicate(state,separator)){
+            cout<<"State has been duplicate:";
+            cout<<"\n\t\ttry again:";
+            getline(cin,state);
+        }
+        while(state==""||state==" "){
+            cout<<"Final state can't be Empty\n\tInput again:";
+            getline(cin,state);
+        }
+        queue<string> tmp=StringSplit(state,separator);
+        while(!tmp.empty()){
+            k=isExist(FA.Q,tmp.front());
+            if(!k){
+                break;
+            }
+            tmp.pop();
+        }
+        if(k){
+            FA.final_state=StringSplit(state,separator);
+        }else{
+            cout<<"Final State not Exist in all state!!\n";
+            cout<<"Input again:";
+            cin>>state;
+            tmp=StringSplit(state,' ');
+            while(!tmp.empty()){
+                k=isExist(FA.Q,tmp.front());
+                if(!k){
+                    break;
+                }
+                tmp.pop();
+            }
+        }
+    }while(!k);
+    cout<<"Input character:";
+    char ch;
+    while(1){
+        cin>>ch;
+        FA.character.push(ch);
+        if(cin.get()=='\n'){
+            break;
+        }
+    };
+    queue <char> ChTmp=FA.character;
+    char chArr[ChTmp.size()];
+    for(int i=0;!ChTmp.empty();i++){
+        chArr[i]=ChTmp.front();
+        ChTmp.pop();
+    }
+    cout<<"Input transition:";
+    for(int i=0;i<FA.Q.size();i++){
+        for(int j=0;j<FA.character.size();j++){
+            cout<<"\n\t{"<<strArr[i]<<","<<chArr[j]<<"}:";
+            k=0;
+            int y=0;
+            do{
+                getline(cin,state);
+                while(state==""||state==" "){
+                    cout<<"\n\t\tNext is gonna be empty!";
+                    cout<<"\n\t\tAre you sure?";
+                    cout<<"\n\t\tPress any key to continue| Esc to re-input\n";
+                    if(_getch()==27){
+                        cout<<"\n\t\tTry again:";
+                        getline(cin,state);
+                    }else{
+                        y=1;
+                        break;
+                    }
+                }
+                if(y==0){
+                    queue<string> tmp=StringSplit(state,' ');
+                    while(!tmp.empty()){
+                        k=isExist(FA.Q,tmp.front());
+                        if(!k){
+                            break;
+                        }
+                        tmp.pop();
+                    }
+                    if(k){
+                        struct Transition tr;
+                        tr.presentState=strArr[i];
+                        tr.TransitionChar=chArr[j];
+                        tr.nextState=StringSplit(state,' ');
+                        FA.transitionSet.push(tr);
+                    }else{
+                        cout<<"Next State not Exist in all state!!\n";
+                        cout<<"Input again:";
+                        getline(cin,state);
+                        queue<string> tmp=StringSplit(state,' ');
+                        while(!tmp.empty()){
+                            k=isExist(FA.Q,tmp.front());
+                                if(!k){
+                                    break;
+                                }
+                                tmp.pop();
+                        }
+                        if(k){
+                            struct Transition tr;
+                            tr.presentState=strArr[i];
+                            tr.TransitionChar=chArr[j];
+                            tr.nextState=StringSplit(state,' ');
+                            FA.transitionSet.push(tr);
+                        }
+
+                    }
+                }else{
+                    struct Transition tr;
+                    tr.presentState=strArr[i];
+                    tr.TransitionChar=chArr[j];
+                    tr.nextState.push("");
+                    FA.transitionSet.push(tr);
+                    y=0;
+                    break;
+                }
+            }while(!k);
+
+        }
+        char cha=0;
+        cout<<"\n\t{"<<strArr[i]<<","<<"epsilon"<<"}:";
+            k=0;
+            int y=0;
+            do{
+                getline(cin,state);
+                while(state==""||state==" "){
+                    cout<<"\n\t\tNext is gonna be empty!";
+                    cout<<"\n\t\tAre you sure?";
+                    cout<<"\n\t\tPress any key to continue| Esc to re-input\n";
+                    if(_getch()==27){
+                        cout<<"\n\t\tTry again:";
+                        getline(cin,state);
+                    }else{
+                        y=1;
+                        break;
+                    }
+                }
+                if(y==0){
+                    queue<string> tmp=StringSplit(state,' ');
+                    while(!tmp.empty()){
+                        k=isExist(FA.Q,tmp.front());
+                        if(!k){
+                            break;
+                        }
+                        tmp.pop();
+                    }
+                    if(k){
+                        struct Transition tr;
+                        tr.presentState=strArr[i];
+                        tr.TransitionChar=cha;
+                        tr.nextState=StringSplit(state,' ');
+                        FA.transitionSet.push(tr);
+                    }else{
+                        cout<<"Next State not Exist in all state!!\n";
+                        cout<<"Input again:";
+                        getline(cin,state);
+                        queue<string> tmp=StringSplit(state,' ');
+                        while(!tmp.empty()){
+                            k=isExist(FA.Q,tmp.front());
+                                if(!k){
+                                    break;
+                                }
+                                tmp.pop();
+                        }
+                        if(k){
+                            struct Transition tr;
+                            tr.presentState=strArr[i];
+                            tr.TransitionChar=cha;
+                            tr.nextState=StringSplit(state,' ');
+                            FA.transitionSet.push(tr);
+                        }
+
+                    }
+                }else{
+                    struct Transition tr;
+                    tr.presentState=strArr[i];
+                    tr.TransitionChar=cha;
+                    tr.nextState.push("");
+                    FA.transitionSet.push(tr);
+                    y=0;
+                    break;
+                }
+            }while(!k);
+
+    }
+
+    return FA;
+}
+
+
+
+
+
+void displayString(queue<string> tmp){
+    for(int i=0;!tmp.empty();i++){
+        if(i==0){
+            cout<<"\""<<tmp.front()<<"\"";
+        }else{
+            cout<<",\""<<tmp.front()<<"\"";
+        }
+        tmp.pop();
+    }
+}
+
+void display(struct FA tmp){
+    int k=tmp.character.size();
+    string text="";
+    while(!tmp.character.empty()){
+        cout<<setw(10)<<right<<tmp.character.front();
+        tmp.character.pop();
+    }
+    if()
+    cout<<"epsilon";
+    cout<<endl;
+    while(!tmp.Q.empty()){
+        cout<<setw(8)<<left<<tmp.Q.front();
+        for(int i=0;i<k;i++){
+            text="";
+            int y=tmp.transitionSet.front().nextState.size();
+            if(y==0){
+                text="{}";
+            }else if(y==1){
+                text="{"+tmp.transitionSet.front().nextState.front()+"}";
+            }else{
+                for(int j=0;j<y;j++){
+                    if(j==0){
+                        text+="{"+tmp.transitionSet.front().nextState.front()+",";
+                    }else if(j==y-1){
+                        text+=tmp.transitionSet.front().nextState.front()+"}";
+                    }else{
+                        text+=tmp.transitionSet.front().nextState.front()+",";
+                    }
+                    tmp.transitionSet.front().nextState.pop();
+                }
+            }
+            cout<<setw(10)<<left<<text;
+            tmp.transitionSet.pop();
+        }
+        cout<<endl;
+        tmp.Q.pop();
+    }
+
+}
+bool isEqual(queue<string>SetOfString_1,queue<string> SetOfString_2){
+    if(SetOfString_1.size()==SetOfString_2.size()){
+        int x=SetOfString_1.size();
+        string arr_1[x];
+        string arr_2[x];
+        int check[x],lastIndex=-2;
+        for(int i=0;!SetOfString_1.empty();i++){
+            arr_1[i]=SetOfString_1.front();
+            arr_2[i]=SetOfString_2.front();
+            check[i]=0;
+            SetOfString_1.pop();
+            SetOfString_2.pop();
+        }
+
+        for(int i=0;i<x;i++){
+            for(int j=0;j<x;j++){
+                if(j!=lastIndex){
+                    if(arr_1[i]==arr_2[j]){
+                        check[i]=1;
+                        lastIndex=j;
+                        continue;
+                    }
+                }
+            }
+        }
+        for(int i=0;i<x;i++){
+            if(check[i]==0){
+                return false;
+            }
+        }
+        return true;
+    }else{
+        return false;
+    }
+};
+
+string QueueStringTOString(queue<string>Str,char separator){
+    string text="";
+    int k=0;
+    for(int i=0;!Str.empty();i++){
+        if(Str.front()!="" && Str.front()!=" "){
+            if(k==0){
+                text+=Str.front();
+            }else{
+                text+=separator+Str.front();
+            }
+            k++;
+        }
+        Str.pop();
+    }
+    return text;
+
+};
+
+void displayRepresent(queue <newRepresentState>Rtmp ){
+    while(!Rtmp.empty()){
+        cout<<Rtmp.front().value<<"\t";
+        cout<<QueueStringTOString(Rtmp.front().setOfState,',');
+        cout<<"\n";
+        Rtmp.pop();
+    }
+}
+
+void displayTransition(queue <Transition> tr){
+    while(!tr.empty()){
+        cout<<"{"<<tr.front().presentState<<","<<tr.front().TransitionChar<<"}:";
+        while(!tr.front().nextState.empty()){
+            cout<<tr.front().nextState.front()<<" ";
+            tr.front().nextState.pop();
+        }
+        tr.pop();
+    }
+}

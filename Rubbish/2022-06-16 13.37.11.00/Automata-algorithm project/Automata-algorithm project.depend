@@ -1,0 +1,459 @@
+# depslib dependency file v1.0
+1653415137 source:d:\gic i3\sii\algorithm and programing ii\automata-algorithm project\main.cpp
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<string>
+	"Header.h"
+	"NfaToDfa.h"
+
+1653464785 d:\gic i3\sii\algorithm and programing ii\automata-algorithm project\header.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653462917 d:\gic i3\sii\algorithm and programing ii\automata-algorithm project\nfatodfa.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1653559951 source:d:\gic i3\sii\automata-algorithm project\main.cpp
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<string>
+	"Header.h"
+	"NfaToDfa.h"
+	"Test String.h"
+	"Design console.h"
+	"MySql man.h"
+
+1653491050 d:\gic i3\sii\automata-algorithm project\header.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653472794 d:\gic i3\sii\automata-algorithm project\nfatodfa.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1653486971 d:\gic i3\sii\automata-algorithm project\test string.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653530816 d:\gic i3\sii\automata-algorithm project\design console.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653561129 d:\gic i3\sii\automata-algorithm project\mysql man.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<mysql.h>
+
+1648018378 c:\program files\mysql\mysql server 8.0\include\mysql.h
+	<stdbool.h>
+	<stddef.h>
+	<stdint.h>
+	<sys/types.h>
+	<windows.h>
+	<winsock2.h>
+	"field_types.h"
+	"my_list.h"
+	"mysql_com.h"
+	"mysql/client_plugin.h"
+	"mysql_version.h"
+	"mysql_time.h"
+	"errmsg.h"
+
+1648018378 c:\program files\mysql\mysql server 8.0\include\field_types.h
+
+1648018378 c:\program files\mysql\mysql server 8.0\include\my_list.h
+
+1648018378 c:\program files\mysql\mysql server 8.0\include\mysql_com.h
+	<stdbool.h>
+	<stdint.h>
+	"my_command.h"
+	"my_compress.h"
+	"my_io.h"
+	"mysql/components/services/bits/my_io_bits.h"
+	<stdbool.h>
+	"mysql/udf_registration_types.h"
+
+1648018378 c:\program files\mysql\mysql server 8.0\include\my_command.h
+
+1648018378 c:\program files\mysql\mysql server 8.0\include\my_compress.h
+
+1648018378 c:\program files\mysql\mysql server 8.0\include\mysql\udf_registration_types.h
+	<stdbool.h>
+
+1648018378 c:\program files\mysql\mysql server 8.0\include\mysql\client_plugin.h
+	<stdarg.h>
+	<stdlib.h>
+	"plugin_auth_common.h"
+
+1648018378 c:\program files\mysql\mysql server 8.0\include\mysql\plugin_auth_common.h
+	<windows.h>
+
+1648023606 c:\program files\mysql\mysql server 8.0\include\mysql_version.h
+
+1648018378 c:\program files\mysql\mysql server 8.0\include\mysql_time.h
+
+1648018378 c:\program files\mysql\mysql server 8.0\include\errmsg.h
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\mysql.h
+	<sys/types.h>
+	<windows.h>
+	<winsock2.h>
+	"mysql_version.h"
+	"mysql_com.h"
+	"mysql_time.h"
+	"my_list.h"
+	"mysql/client_plugin.h"
+	"typelib.h"
+	"my_alloc.h"
+
+1647869444 c:\program files\mysql\mysql server 5.7\include\mysql_version.h
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\mysql_com.h
+	"binary_log_types.h"
+	"my_command.h"
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\binary_log_types.h
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\my_command.h
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\mysql_time.h
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\my_list.h
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\mysql\client_plugin.h
+	<stdarg.h>
+	<stdlib.h>
+	"plugin_auth_common.h"
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\mysql\plugin_auth_common.h
+	<windows.h>
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\typelib.h
+	"my_alloc.h"
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\my_alloc.h
+	"mysql/psi/psi_memory.h"
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\mysql\psi\psi_memory.h
+	"psi_base.h"
+
+1647858620 c:\program files\mysql\mysql server 5.7\include\mysql\psi\psi_base.h
+
+1653559951 source:d:\c++ project\automata-algorithm project\main.cpp
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<string>
+	"Header.h"
+	"NfaToDfa.h"
+	"Test String.h"
+	"Design console.h"
+	"MySql man.h"
+
+1653491050 d:\c++ project\automata-algorithm project\header.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653472794 d:\c++ project\automata-algorithm project\nfatodfa.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1653486971 d:\c++ project\automata-algorithm project\test string.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653530816 d:\c++ project\automata-algorithm project\design console.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653561129 d:\c++ project\automata-algorithm project\mysql man.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<mysql.h>
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\mysql.h
+	<sys/types.h>
+	<windows.h>
+	<winsock2.h>
+	"mysql_version.h"
+	"mysql_com.h"
+	"mysql_time.h"
+	"my_list.h"
+	"mysql/client_plugin.h"
+	"typelib.h"
+	"my_alloc.h"
+
+1647869444 d:\c++ project\automata-algorithm project\mysql server 5.7\include\mysql_version.h
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\mysql_com.h
+	"binary_log_types.h"
+	"my_command.h"
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\binary_log_types.h
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\my_command.h
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\mysql_time.h
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\my_list.h
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\mysql\client_plugin.h
+	<stdarg.h>
+	<stdlib.h>
+	"plugin_auth_common.h"
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\mysql\plugin_auth_common.h
+	<windows.h>
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\typelib.h
+	"my_alloc.h"
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\my_alloc.h
+	"mysql/psi/psi_memory.h"
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\mysql\psi\psi_memory.h
+	"psi_base.h"
+
+1647858620 d:\c++ project\automata-algorithm project\mysql server 5.7\include\mysql\psi\psi_base.h
+
+1653721192 source:d:\seangmeng projetc\automata-algorithm project\main.cpp
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<string>
+	"Header.h"
+	"NfaToDfa.h"
+	"Test String.h"
+	"Design console.h"
+	"header.2.h"
+	"Minimized-DFA.h"
+	"MySql man.h"
+
+1653491052 d:\seangmeng projetc\automata-algorithm project\header.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653472796 d:\seangmeng projetc\automata-algorithm project\nfatodfa.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1653486972 d:\seangmeng projetc\automata-algorithm project\test string.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653530818 d:\seangmeng projetc\automata-algorithm project\design console.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653561130 d:\seangmeng projetc\automata-algorithm project\mysql man.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<mysql.h>
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\mysql.h
+	<sys/types.h>
+	<windows.h>
+	<winsock2.h>
+	"mysql_version.h"
+	"mysql_com.h"
+	"mysql_time.h"
+	"my_list.h"
+	"mysql/client_plugin.h"
+	"typelib.h"
+	"my_alloc.h"
+
+1647869444 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\mysql_version.h
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\mysql_com.h
+	"binary_log_types.h"
+	"my_command.h"
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\binary_log_types.h
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\my_command.h
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\mysql_time.h
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\my_list.h
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\mysql\client_plugin.h
+	<stdarg.h>
+	<stdlib.h>
+	"plugin_auth_common.h"
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\mysql\plugin_auth_common.h
+	<windows.h>
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\typelib.h
+	"my_alloc.h"
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\my_alloc.h
+	"mysql/psi/psi_memory.h"
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\mysql\psi\psi_memory.h
+	"psi_base.h"
+
+1647858620 d:\seangmeng projetc\automata-algorithm project\mysql server 5.7\include\mysql\psi\psi_base.h
+
+1653718471 d:\seangmeng projetc\automata-algorithm project\header.2.h
+
+1653925991 d:\seangmeng projetc\automata-algorithm project\minimized-dfa.h
+	<queue>
+	<string>
+
+1654830540 source:d:\c++ project\new folder\automata-algorithm project\main.cpp
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<string>
+	"Header.h"
+	"NfaToDfa.h"
+	"Test String.h"
+	"Design console.h"
+	"header.2.h"
+	"Minimized-DFA.h"
+	"MySql man.h"
+
+1654795524 d:\c++ project\new folder\automata-algorithm project\header.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653472796 d:\c++ project\new folder\automata-algorithm project\nfatodfa.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1653486972 d:\c++ project\new folder\automata-algorithm project\test string.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653530818 d:\c++ project\new folder\automata-algorithm project\design console.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+
+1653718472 d:\c++ project\new folder\automata-algorithm project\header.2.h
+
+1654794888 d:\c++ project\new folder\automata-algorithm project\minimized-dfa.h
+	<queue>
+	<string>
+
+1653561130 d:\c++ project\new folder\automata-algorithm project\mysql man.h
+	<iostream>
+	<queue>
+	<conio.h>
+	<iomanip>
+	<mysql.h>
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\mysql.h
+	<sys/types.h>
+	<windows.h>
+	<winsock2.h>
+	"mysql_version.h"
+	"mysql_com.h"
+	"mysql_time.h"
+	"my_list.h"
+	"mysql/client_plugin.h"
+	"typelib.h"
+	"my_alloc.h"
+
+1647869444 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\mysql_version.h
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\mysql_com.h
+	"binary_log_types.h"
+	"my_command.h"
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\binary_log_types.h
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\my_command.h
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\mysql_time.h
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\my_list.h
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\mysql\client_plugin.h
+	<stdarg.h>
+	<stdlib.h>
+	"plugin_auth_common.h"
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\mysql\plugin_auth_common.h
+	<windows.h>
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\typelib.h
+	"my_alloc.h"
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\my_alloc.h
+	"mysql/psi/psi_memory.h"
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\mysql\psi\psi_memory.h
+	"psi_base.h"
+
+1647858620 d:\c++ project\new folder\automata-algorithm project\mysql server 5.7\include\mysql\psi\psi_base.h
+
+1624471253 d:\c++ project\new folder\automata-algorithm project\fort.hpp
+	<iomanip>
+	<sstream>
+	<string>
+	<stdexcept>
+	<type_traits>
+	"fort.h"
+
+1624471253 d:\c++ project\new folder\automata-algorithm project\fort.h
+	<stddef.h>
+	<stdlib.h>
+	<stdint.h>
+	<limits.h>
+
